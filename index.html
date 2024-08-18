@@ -10,27 +10,45 @@
 </head>
 
 <body>
-  <main>
-    <header></header>
-    <form>
-      <label></label>
-      <input>
-      <label></label>
-      <input>
-      <label></label>
-      <input>
-      <fieldset>
-        <legend></legend>
-        <div></div>
-        <div></div>
-      </fieldset>
-      <label></label>
-      <textarea></textarea>
-      <div>
-        <input>
-        <label></label>
+  <main class="container">
+    <header>Contact Us</header>
+    <form class="contact-form" aria-label="Contact Us">
+      <div class="names">
+        <div class="name">
+          <label for="first-name">First Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="first-name" name="first-name" required aria-required="true">
+        </div>
+        <div class="name">
+          <label for="last-name">Last Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="last-name" name="last-name" required aria-required="true">
+        </div>
       </div>
-      <button></button>
+      <label for="email">Email Address <span aria-hidden="true">*</span></label>
+      <input type="email" id="email" name="email" required aria-required="true">
+
+      <fieldset>
+        <legend>Query Type <span aria-hidden="true">*</span></legend>
+        <div class="radiobuttons">
+          <div class="radios">
+            <input type="radio" id="general-enquiry" name="query-type" value="general" required aria-required="true">
+            <label for="general-enquiry">General Enquiry</label>
+          </div>
+          <div class="radios">
+            <input type="radio" id="support-request" name="query-type" value="support" required aria-required="true">
+            <label for="support-request">Support Request</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <label for="message">Message <span aria-hidden="true">*</span></label>
+      <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="consent" name="consent" required aria-required="true">
+        <label for="consent">I consent to being contacted by the team <span aria-hidden="true">*</span></label>
+      </div>
+
+      <button type="submit">Submit</button>
     </form>
   </main>
 </body>
